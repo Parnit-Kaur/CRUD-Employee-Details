@@ -1,0 +1,6 @@
+<!--<router-outlet  (activate)(onAddDetail) ="addDetail($event)"></router-outlet>-->
+<app-add-details (onAddDetail) ="addDetail($event)"></app-add-details>
+<app-detail-item [details]="details" (onDeleteDetail)= "deleteDetail($event)" (onEditDetail)="onEditRecord($event)">
+</app-detail-item>
+<app-edit-details [detail]="editRecord" (onEditDetail) ="editDetail($event)" ></app-edit-details>
+

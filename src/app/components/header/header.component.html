@@ -1,0 +1,11 @@
+<header>
+    <h1>
+        {{title}}
+    </h1>
+    <app-button 
+    color="{{showAddDetail ?'red':'green'}}" text="{{showAddDetail ?'Close':'Add Details'}}" (btnClick)="toggleAddDetail()" [routerLink]="['/add']">
+    </app-button>
+    <input type="submit" value="Go Back" class="btn" [routerLink]="['/']"  *ngIf="hasRoute()">
+    <app-loadbutton *ngIf="hasRoute2('/')" color="{{showDetail ?'orange':'blue'}}" text="{{showDetail ?'Refresh Data':'Load Data'}}" (btnClick)="toggleDetails()" >
+    </app-loadbutton>
+</header>

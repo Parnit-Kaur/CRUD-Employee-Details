@@ -1,0 +1,10 @@
+.add-form {
+    margin-bottom: 40px;
+  }
+  .invalid-feedback {
+    background-color: #fed3d3;
+    color: #820000;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+  

@@ -1,0 +1,43 @@
+<style>
+    td,th{
+        text-align: center;
+        padding: 15px;
+    }
+    #t01 tr:nth-child(even) {
+    background-color: #eee;
+    }
+    #t01 tr:nth-child(odd) {
+    background-color: #fff;
+    }
+    #t01 th {
+    background-color: black;
+    color: white;
+}
+</style>
+<div   *ngIf= "showDetail" class="detail">
+    <table style="width:100%" id="t01"  >
+      <th>First Name</th>
+      <th>Middle Name</th>
+      <th>Last Name</th>
+      <th>Email ID</th>
+      <th>Phone Number</th>
+      <th>Role</th>
+      <th>Address</th>
+      <th>Delete</th>
+      <th>Edit</th>
+        <tr  *ngFor ="let detail of details;let i = index"   mouseAction >
+          <td >{{detail.fname | titlecase }}</td>
+          <td >{{detail.mname | titlecase}}</td>
+          <td >{{detail.lname | titlecase}}</td>
+          <td >{{detail.email}}</td>
+          <td >{{detail.phno}}</td>
+          <td >{{detail.role}}</td>
+          <td >{{detail.address}}</td>
+          <td ><fa-icon (click)="onDelete(detail)" [ngStyle]="{'color':'red'}" [icon]="faTimes"></fa-icon></td>
+          <td><app-editbutton color="{{detail.isEdit ?'blue':'green'}}" text="{{detail.isEdit ?'Editing..':'Edit Data'}}" (click)="toggleEdit(i,detail);" [routerLink]="['/edit', detail.id]"></app-editbutton></td>
+        </tr>
+      </table>
+
+      
+
+</div>

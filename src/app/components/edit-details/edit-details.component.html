@@ -1,0 +1,37 @@
+<form *ngIf= "showEdit" class="add-form" (ngSubmit)="onEditSubmit(detail)">
+        <div class="form-control">
+        <label for="fname">First Name</label>
+        <input type="text" name="fname" [(ngModel)]= "detail.fname" id="fname" placeholder="First Name">
+    </div>
+    <div class="form-control">
+        <label for="mname">Middle Name</label>
+        <input type="text" name="mname" [(ngModel)]= "detail.mname" id="mname" placeholder="Middle Name">
+    </div>
+    <div class="form-control">
+        <label for="lname">Last Name</label>
+        <input type="text" name="lname"  [(ngModel)]= "detail.lname" id="lname" placeholder="Last Name">
+    </div> 
+    <div class="form-control">
+        <label for="email">Email ID</label>
+        <input type="text" name="email"  [(ngModel)]= "detail.email" id="email" placeholder="Email ID">
+    </div>
+    <div class="form-control">
+        <label for="phno">Phone Number</label>
+        <input type="text" name="phno"  [(ngModel)]= "detail.phno" id="phno" placeholder="Phone Number">
+    </div>
+    <div class="form-control">
+        <label for="role">Role</label>
+        <input list="roles" name="role"  [(ngModel)]= "detail.role" placeholder="Role">
+        <datalist id="roles">
+            <option value="Admin">
+            <option value="SuperAdmin">
+            <option value="Subscriber">
+  </datalist>
+    </div>
+    <div class="form-control">
+        <label for="address">Address</label>
+        <input type="text" name="address"  [(ngModel)]= "detail.address" id="address" placeholder="Address">
+    </div>
+    <input type="submit" value="Edit Details" class="btn btn-block"> 
+   
+</form>

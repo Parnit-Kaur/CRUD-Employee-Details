@@ -1,0 +1,68 @@
+{
+  "details": [
+    {
+      "id": 1,
+      "fname": "aaaaaaa",
+      "mname": "aaaccc",
+      "lname": "aaa",
+      "email": "email",
+      "phno": "9999999111",
+      "role": "SuperAdmin",
+      "address": "#aa",
+      "isEdit": true
+    },
+    {
+      "id": 2,
+      "fname": "bbbb",
+      "mname": "bbbb",
+      "lname": "bbbbb",
+      "email": "b@gmail.com",
+      "phno": "9999999999",
+      "role": "Admin",
+      "address": "#bb",
+      "isEdit": true
+    },
+    {
+      "id": 3,
+      "fname": "abcc",
+      "mname": "abcc",
+      "lname": "abc",
+      "email": "c@gmail.com",
+      "phno": "9999999999",
+      "role": "Admin",
+      "address": "#cc",
+      "isEdit": true
+    },
+    {
+      "fname": "test",
+      "mname": "test",
+      "lname": "test",
+      "email": "test@gmail.com",
+      "phno": "9999999999",
+      "role": "Subscriber",
+      "address": "test",
+      "id": 5
+    },
+    {
+      "fname": "aaaa",
+      "mname": "aa",
+      "lname": "aaa",
+      "email": "aa@gmail.com",
+      "phno": "9999999999",
+      "role": "SuperAdmin",
+      "address": "dsd",
+      "id": 6
+    },
+    {
+      "fname": "test",
+      "mname": "test",
+      "lname": "test",
+      "email": "test@gmail.com",
+      "phno": "9999999999",
+      "role": "Admin",
+      "address": "Test data",
+      "id": 7,
+      "isEdit": true
+    }
+  ]
+}

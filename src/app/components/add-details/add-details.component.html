@@ -1,0 +1,163 @@
+
+<form *ngIf= "showAddDetail" class="add-form" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <div class="form-control">
+        <label for="fname">First Name</label>
+        <input type="text" name="fname" formControlName="fname"  [(ngModel)]= "fname" id="fname" placeholder="First Name" [ngClass]="{ 'is-invalid': submitted && f.fname.errors }">
+        <div *ngIf="submitted && f.fname.errors" class="invalid-feedback">
+            <div *ngIf="f.fname.errors.required">First Name is required</div>
+            <div *ngIf="f.fname.errors.minlength">First Name must be at least 4 characters</div>
+        </div>
+    </div>
+    <div class="form-control">
+        <label for="mname">Middle Name</label>
+        <input type="text" name="mname" formControlName="mname" [(ngModel)]= "mname" id="mname" placeholder="Middle Name" [ngClass]="{ 'is-invalid': submitted && f.mname.errors }">
+        <div *ngIf="submitted && f.mname.errors" class="invalid-feedback">
+            <div *ngIf="f.mname.errors.required">Middle Name is required</div>
+        </div>
+    </div>
+    <div class="form-control">
+        <label for="lname">Last Name</label>
+        <input type="text" name="lname" formControlName="lname"  [(ngModel)]= "lname" id="lname" placeholder="Last Name" [ngClass]="{ 'is-invalid': submitted && f.lname.errors }">
+        <div *ngIf="submitted && f.lname.errors" class="invalid-feedback">
+            <div *ngIf="f.lname.errors.required">Last Name is required</div>
+        </div>
+    </div> 
+    <div class="form-control">
+        <label for="email">Email ID</label>
+        <input type="text" name="email" formControlName="email"  [(ngModel)]= "email" id="email" placeholder="Email ID" [ngClass]="{ 'is-invalid': submitted && f.email.errors }">
+        <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+            <div *ngIf="f.email.errors.required">Email is required</div>
+            <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+        </div>
+    </div>
+    <div class="form-control">
+        <label for="phno">Phone Number</label>
+        <input type="text" name="phno" formControlName="phno" [(ngModel)]= "phno" id="phno" placeholder="Phone Number" [ngClass]="{ 'is-invalid': submitted && f.phno.errors }">
+        <div *ngIf="submitted && f.phno.errors" class="invalid-feedback">
+            <div *ngIf="f.phno.errors.required">Phone Number is required</div>
+            <div *ngIf="f.phno.errors.minlength">Phone number must be of 10 digits</div>
+            <div  *ngIf="f.phno.errors.pattern">Please enter a valid Phone Number</div>
+        </div>
+    </div>
+    <div class="form-control">
+        <label for="role">Role</label>
+        <select name="role" formControlName="role" [(ngModel)]= "role" placeholder="Role" [ngClass]="{ 'is-invalid': submitted && f.role.errors }"  class="drop-down">
+            <option value="Admin">Admin</option>
+            <option value="SuperAdmin">SuperAdmin</option>
+            <option value="Subscriber">Subscriber</option>
+        </select>
+        <div *ngIf="submitted && f.role.errors" class="invalid-feedback">
+            <div *ngIf="f.role.errors.required">Role is required</div>
+           
+        </div>
+    </div>
+    <div class="form-control">
+        <label for="address">Address</label>
+        <input type="text" name="address" formControlName="address" [(ngModel)]= "address" id="address" placeholder="Address" [ngClass]="{ 'is-invalid': submitted && f.address.errors }">
+        <div *ngIf="submitted && f.address.errors" class="invalid-feedback">
+            <div *ngIf="f.address.errors.required">Address is required</div>
+        </div>
+    </div>
+
+    
+    <input type="submit" value="Save Details" class="btn btn-block" >
+    </form>
+<!--
+
+        <label for="role">Role</label>
+        <input list="roles" name="role" formControlName="role" [(ngModel)]= "role" placeholder="Role" [ngClass]="{ 'is-invalid': submitted && f.role.errors }">
+        <datalist id="roles">
+            <option value="Admin">
+            <option value="SuperAdmin">
+            <option value="Subscriber">
+        </datalist>
+
+
+
+
+
+<form *ngIf= "showAddDetail" class="add-form" (ngSubmit)="onSubmit()">
+    <div class="form-control">
+        <label for="fname">First Name</label>
+        <input type="text" name="fname" [(ngModel)]= "fname" id="fname" placeholder="First Name">
+    </div>
+    <div class="form-control">
+        <label for="mname">Middle Name</label>
+        <input type="text" name="mname" [(ngModel)]= "mname" id="mname" placeholder="Middle Name">
+    </div>
+    <div class="form-control">
+        <label for="lname">Last Name</label>
+        <input type="text" name="lname"  [(ngModel)]= "lname" id="lname" placeholder="Last Name">
+    </div> 
+    <div class="form-control">
+        <label for="email">Email ID</label>
+        <input type="text" name="email"  [(ngModel)]= "email" id="email" placeholder="Email ID">
+    </div>
+    <div class="form-control">
+        <label for="phno">Phone Number</label>
+        <input type="text" name="phno"  [(ngModel)]= "phno" id="phno" placeholder="Phone Number">
+    </div>
+    <div class="form-control">
+        <label for="role">Role</label>
+        <input list="roles" name="role"  [(ngModel)]= "role" placeholder="Role">
+        <datalist id="roles">
+            <option value="Admin">
+            <option value="SuperAdmin">
+            <option value="Subscriber">
+  </datalist>
+    </div>
+    <div class="form-control">
+        <label for="address">Address</label>
+        <input type="text" name="address"  [(ngModel)]= "address" id="address" placeholder="Address">
+    </div>
+    <input type="submit" value="Save Details" class="btn btn-block">
+
+</form>
+
+
+
+
+<div class="jumbotron" *ngIf= "showAddDetail" class="add-form" (ngSubmit)="onSubmit()">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h2>Angular 6 Reactive Form Validation</h2>
+                <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                    <div class="form-group">
+                        <label>First Name</label>
+                        <input type="text" formControlName="firstName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" />
+                        <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+                            <div *ngIf="f.firstName.errors.required">First Name is required</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Last Name</label>
+                        <input type="text" formControlName="lastName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }" />
+                        <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+                            <div *ngIf="f.lastName.errors.required">Last Name is required</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="text" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+                        <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                            <div *ngIf="f.email.errors.required">Email is required</div>
+                            <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+                        <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                            <div *ngIf="f.password.errors.required">Password is required</div>
+                            <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
+                        </div>
+                    </div>
+                    <input type="submit" value="Save Details" class="btn btn-block">
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+-->
